@@ -1,0 +1,57 @@
+<template name="companyJoin">
+
+		<div class="body body-s">		
+			<form action="" id="companyjoinform" class="sky-form">
+				<header>dynOrder Registration</header>
+ {{#if errorMessages}}
+              	{{#each errorMessages}}
+                <div class="meterror">
+                	
+                	{{this}}
+                
+                </div>
+              	{{/each}}
+            	
+          	  {{/if}}
+				<fieldset>					
+					<section>
+						<label class="input">
+							<i class="icon-append fa fa-user"></i>
+							<input type="text" name="username" placeholder="User Name">
+							<b class="tooltip tooltip-bottom-right">We need your company domain</b>
+						</label>
+					</section>
+			
+					<section>
+						<label class="input">
+							<i class="icon-append fa fa-envelope-o"></i>
+							<input type="email" name="emailAddress" placeholder="Email address">
+							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+						</label>
+					</section>
+					
+					<section>
+						<div class="form-group">
+						<label class="input">
+							<i class="icon-append fa fa-lock"></i>
+							<input type="password" name="password" placeholder="Password" id="password">
+							<b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+						</label>
+						</div>
+					</section>
+					
+					<section>
+						<label class="input">
+							<i class="icon-append fa fa-lock"></i>
+							<input type="password" name="passwordConfirm" placeholder="Confirm password">
+							<b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+						</label>
+					</section>
+				</fieldset>
+				<footer>
+					<button type="submit" class="button">Submit</button>
+				</footer>
+			</form>			
+		</div>
+
+</template>
